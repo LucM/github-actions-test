@@ -24,14 +24,14 @@ services:
         - NODE_ENV=test
         - LOG_LEVEL=info
       volumes:
-        - ./package1 :/home/node/app
+        - ./package1:/home/node/app
       ports:
         - "4000:4000"
       depends_on:
         - postgres
       links:
         - postgres
-      command: "ls"
+      command: "npm run test"
 
 networks:
     network:
