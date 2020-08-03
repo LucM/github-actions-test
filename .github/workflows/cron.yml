@@ -1,8 +1,8 @@
-name: 'CRON'
+name: Cron
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/* * * * *'
+    - cron:  '*/1 * * * *'
 jobs:
   echo:
     runs-on: ubuntu-latest
