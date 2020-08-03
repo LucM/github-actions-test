@@ -31,7 +31,7 @@ services:
         - postgres
       links:
         - postgres
-      command: "npm run test"
+      command: "ls"
 
 networks:
     network:
