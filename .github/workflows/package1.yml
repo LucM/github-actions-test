@@ -13,5 +13,5 @@ jobs:
       - name: Install
         run: npm install
       - name: DockerCompose Up
-        run: docker-compose up --exit-code-from web
+        run: docker-compose up --exit-code-from package1
 
