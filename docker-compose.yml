@@ -33,6 +33,23 @@ services:
         - postgres
       command: "npm run test"
 
+    package2:
+      image: "node:14"
+      user: "node"
+      working_dir: /home/node/app
+      environment:
+        - NODE_ENV=test
+        - LOG_LEVEL=info
+      volumes:
+        - ./package2:/home/node/app
+      ports:
+        - "4000:4000"
+      depends_on:
+        - postgres
+      links:
+        - postgres
+      command: "npm run test"
+
 networks:
     network:
         driver: bridge

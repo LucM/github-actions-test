@@ -1,5 +1,8 @@
-name: test-integration
-on: [push]
+name: Package 1
+on:
+  push:
+    paths:
+      - 'package1/**'
 jobs:
   test:
     runs-on: ubuntu-latest
