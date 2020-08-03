@@ -25,6 +25,6 @@ jobs:
         run: npm install
 
       - name: DockerCompose Up
-        run: docker-compose up --exit-code-from package2
+        run: docker-compose up postgres package2 --exit-code-from package2
 
 
