@@ -1,13 +1,13 @@
-name: Manually triggered workflow
+name: Create new version
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: "Person to greet"
+      version:
+        description: "Version"
         required: true
-        default: "Mona the Octocat"
-      home:
-        description: "location"
+        default: "0.0.0"
+      title:
+        description: "Title of the version"
         required: false
 
 jobs:
@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Hello ${{ github.event.inputs.name }}!"
-          echo "- in ${{ github.event.inputs.home }}!"
+          echo "Hello ${{ github.event.inputs.version }}!"
+          echo "- in ${{ github.event.inputs.title }}!"
